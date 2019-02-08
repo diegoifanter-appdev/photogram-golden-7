@@ -1,0 +1,15 @@
+<h1>All Photos</h1>
+
+<a href="photos/new">Add a new photo</a>
+<% @photo_list.each do |pic| %>
+<div>
+
+  <img src= <%= pic.source %>>
+  <p> <%= pic.caption %> </p>
+  <p>
+    <a href="/photos/<%= pic.id %>">Show details</a>
+  </p>
+  </div>
+<hr>
+
+<% end %>
